@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: #000;
+	background-size: auto;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+	0% { opacity: 0; scale: 0; }
+	50% { opacity: 1; }
+	100% { scale: 1; }
+}
+
+/* Tombol */
+button {
+	position: fixed;
+	top: 650px;
+	z-index: 7;
+	padding: 15px 90px;
+	font-size: 30px;
+	font-family: 'Bebas Neue', sans-serif;
+	text-align: center;
+	display: inline-block;
+	color: black;
+	background-color: #000;
+	border: 0.5px solid rgb(212, 175, 55);
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgb(176, 99, 4), 0 3px 10px rgb(176, 99, 4);
+	opacity: 0.5;
+	animation: fadeIn 1.3s cubic-bezier(0.000, -0.015, 0.000, 0.995);
+}
+
+/* Kalkulator */
+.kalkulator {
+	position: fixed;
+	display: grid;
+}
+
+.kalkulator .value {
+	grid-column: span 4;
+	width: 300px;
+	height: 100px;
+	padding: 10px;
+	text-align: right;
+	font-size: 40px;
+	color: #fff;
+	background: #000;
+	border-radius: 4px;
+	border: 0.5px solid rgb(212, 175, 55);
+	box-shadow: 0 2px 4px rgb(176, 99, 4), 0 1.5px 5px rgb(176, 99, 4);
+	opacity: 0.5;
+	animation: fadeIn 1s cubic-bezier(0.000, -0.015, 0.000, 0.995);
+}
+
+.kalkulator span {
+	display: grid;
+	place-items: center;
+	width: 75px;
+	height: 75px;
+	font-size: 25px;
+	color: #fff;
+	background: #000;
+	border: 0.5px solid rgb(212, 175, 55);
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgb(176, 99, 4), 0 1.5px 5px rgb(176, 99, 4);
+	opacity: 0.5;
+	animation: fadeIn 1s cubic-bezier(0.000, -0.015, 0.000, 0.995);
+}
+
+.kalkulator span:active {
+	background: #F9F6F0;
+	color: #111;
+}
+
+/* Modifikasi tombol khusus */
+.kalkulator span.clear {
+	grid-column: span 2;
+	width: 150px;
+	font-size: 25px;
+}
+
+.kalkulator span.plus,
+.kalkulator span.min {
+	font-size: 35px;
+	height: 75px;
+}
+
+.kalkulator span.kali {
+	font-size: 30px;
+}
+
+.kalkulator span.bagi {
+	font-size: 25px;
+}
+
+.kalkulator span.dot {
+	font-size: 35px;
+}
+
+.kalkulator span.equal {
+	grid-column: span 2;
+	width: 150px;
+	font-size: 35px;
+	color: #fff;
+}
+
+/* Video background */
+#myVideo {
+	position: fixed;
+	min-width: 100%;
+	min-height: 100%;
+	animation: fadeIn 5s cubic-bezier(0.000, -0.015, 0.000, 0.995);
+}
